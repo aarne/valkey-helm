@@ -411,6 +411,9 @@
                 "sentinel": {
                     "type": "object",
                     "properties": {
+                        "allowUnsafeTopology": {
+                            "type": "boolean"
+                        },
                         "auth": {
                             "type": "object",
                             "properties": {

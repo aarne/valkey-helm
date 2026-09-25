@@ -54,6 +54,11 @@ the Sentinels through the headless service instead:
 Sentinel authentication is off (replica.sentinel.auth.enabled): the client
 certificate presented at the TLS handshake is the credential.
 {{- end }}
+{{- if .Values.replica.sentinel.allowUnsafeTopology }}
+
+⚠️  replica.sentinel.allowUnsafeTopology is set. This topology cannot fail over
+    safely and is meant for development and test clusters only.
+{{- end }}
 
 ⚠️  The {{ include "valkey.fullname" . }} service load balances across ALL pods in this mode,
     so writes sent to it may hit a replica and fail with -READONLY.
