@@ -894,6 +894,9 @@
                 "affinity": {
                     "type": "object"
                 },
+                "allowUnsafeTopology": {
+                    "type": "boolean"
+                },
                 "auth": {
                     "type": "object",
                     "properties": {
